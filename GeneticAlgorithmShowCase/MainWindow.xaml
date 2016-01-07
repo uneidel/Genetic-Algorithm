@@ -1,0 +1,44 @@
+﻿<Window x:Class="GeneticAlgorithmShowCase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GeneticAlgorithmShowCase"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="832.617">
+    <Grid>
+        <StackPanel >
+         <StackPanel HorizontalAlignment="Left" Width="497">
+                <Label FontFamily="Courier" FontSize="20" Content="Best Answer"></Label>
+                <Label FontFamily="Courier" FontSize="30"  Name="txtBestAnswer"></Label>
+                <StackPanel>
+             <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100" SharedSizeGroup="Label"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0" Grid.Row="0">Total Generations:</Label>
+                <Label Grid.Column="1" Grid.Row="0" Name="txtTotalGeneration"></Label>
+                <Label Grid.Column="0" Grid.Row="1">Average Fitness:</Label>
+                <Label Grid.Column="1" Grid.Row="1" Name="txtAvgFitness"></Label>
+                <Label Grid.Column="0" Grid.Row="2">Total Population:</Label>
+                        <TextBox Grid.Column="1" Grid.Row="2" Name="txtTotalPopulation" Text="600"></TextBox>
+                <Label Grid.Column="0" Grid.Row="3">Mutation rate:</Label>
+                        <TextBox Grid.Column="1" Grid.Row="3" Name="txtMutationRate" Text="0,02"></TextBox>
+            </Grid>
+                </StackPanel>
+                <Button Name="Run" Content="Run" Click="Run_Click"></Button>
+        </StackPanel>
+        </StackPanel>
+        <StackPanel Width="150" HorizontalAlignment="Right">
+            <Label Content="All Phrases:"></Label>
+            <Label Name="txtPhrases"></Label>
+        </StackPanel>
+    </Grid>
+</Window>
